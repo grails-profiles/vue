@@ -34,7 +34,7 @@
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'Welcome',
     data () {
       return {
         msg: 'Welcome to Your Grails & Vue.js App',
