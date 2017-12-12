@@ -24,8 +24,19 @@ task build(type: YarnTask, dependsOn: 'yarn') {
     description = 'Build the client bundle'
     args = ['run', 'build']
 }
+task lint(type: YarnTask, dependsOn: 'yarn') {
+    group = 'build'
+    description = 'Run eslint'
+    args = ['run', 'lint']
+}
 
 task test(type: YarnTask, dependsOn: 'yarn') {
+    group = 'verification'
+    description = 'Run the unit & e2e tests'
+    args = ['run', 'test']
+}
+
+task unit(type: YarnTask, dependsOn: 'yarn') {
     group = 'verification'
     description = 'Run the unit tests'
     args = ['run', 'unit']
@@ -33,12 +44,6 @@ task test(type: YarnTask, dependsOn: 'yarn') {
 
 task e2e(type: YarnTask, dependsOn: 'yarn') {
     group = 'verification'
-    description = 'Run the integration tests'
+    description = 'Run the e2e tests'
     args = ['run', 'e2e']
-}
-
-task eject(type: YarnTask, dependsOn: 'yarn') {
-    group = 'other'
-    description = 'Eject from the create-react-app scripts'
-    args = ['run', 'eject']
 }
