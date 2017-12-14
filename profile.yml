@@ -8,7 +8,7 @@ instructions: |
 
       ./gradlew client:start
 
-    For support, please use the Groovy Community Slack (https://groovycommunity.slack.com/) or open an issue on Github: https://github.com/grails-profiles/react/issues
+    For support, please use the Groovy Community Slack (https://groovycommunity.slack.com/) or open an issue on Github: https://github.com/grails-profiles/vue/issues
 
 skeleton:
     excludes:
