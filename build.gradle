@@ -1,27 +1,22 @@
 buildscript {
     repositories {
+        jcenter()
         mavenLocal()
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
-        classpath "org.grails:grails-gradle-plugin:${project.grailsVersion}"
+        classpath "org.grails:grails-docs:$grailsDocsVersion"
+        classpath 'io.github.groovylang.groovydoc:groovydoc-gradle-plugin:1.0.1'
     }
 }
 
-apply plugin: "org.grails.grails-profile"
-apply plugin: "org.grails.grails-profile-publish"
+version project.projectVersion
 
-group 'org.grails.profiles'
-version '1.0.0.RC1'
-
-grailsPublish {
-    userOrg = 'grails'
-    githubSlug = 'grails-profiles/vue'
-    license = 'Apache-2.0'
-    title = "Vue.js Profile"
-    desc = "A profile for creating Grails applications with Vue.js"
-    developers = [zacharyklein:"Zachary Klein"]
+ext {
+    commonBuild = 'https://raw.githubusercontent.com/grails/grails-common-build/d46efe9f0b41d6d215e245451a4c9d3504c347ee'
 }
+
+apply from:"${commonBuild}/common-docs.gradle"
 
 repositories {
     mavenLocal()
@@ -29,5 +24,5 @@ repositories {
 }
 
 dependencies {
-    runtime "org.grails.profiles:rest-api:3.2.0"
+    documentation "org.codehaus.groovy:groovy-groovydoc:$groovyVersion"
 }
