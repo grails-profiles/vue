@@ -92,7 +92,9 @@ function addJsClass() {
 
 
 <div class="paragraph">
-<p>This profile provides a client/server multi-project build structure. The server Grails app is using the rest-api profile with CORS enabled. It can be started using 'grails run-app' or using the Gradle wrapper:</p>
+<p>The Vue profile provides a client/server multi-project build structure.
+The "server" is a Grails app using the rest-api profile with CORS enabled.
+It can be started using <code>grails run-app</code> (from the <code>server</code> directory) or using the Gradle wrapper:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -100,12 +102,27 @@ function addJsClass() {
 </div>
 </div>
 <div class="paragraph">
-<p>The Vue client app has been built via the vue-cli, using the webpack template. It can be started via 'npm start' (in which case you will need to run 'npm install' to install npm dependencies) or using the Gradle wrapper (which will install npm dependencies automatically if needed):</p>
+<p>The Vue.js client app has been built using the Vue-CLI with the <code>webpack</code> template. It&#8217;s configured for both <code>npm</code> and <code>yarn</code>. and can be started via <code>npm start</code> or <code>yarn start</code>) (in which case you will need to run <code>npm install</code> or <code>yarn</code> to install project dependencies) or using the Gradle wrapper (which will install npm dependencies automatically if needed):</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">./gradlew client:start</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>The client app&#8217;s <code>build.gradle</code> defines other tasks to test and build the app using the scripts in <code>client/package.json</code>.
+Please see <a href="http://vuejs-templates.github.io/webpack/">Vue-CLI&#8217;s documentation</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p>The <code>client/build.gradle</code> file also provides a <code>bootRun</code> task to support running both client &amp; server projects in parallel. To do this, use the Gradle wrapper from the root of the project, and use the <code>-parallel</code> flag:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">./gradlew bootRun -parallel</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Although the profile creates a multi-project build, it is also possible to combine both <code>client</code> and <code>server</code> projects into a single deployable artifact (WAR or JAR file). Refer to the Guide <a href="http://guides.grails.org/react-combined/guide/index.html">Combining the React profile projects</a> to learn how.</p>
 </div>
 
 
