@@ -1,12 +1,15 @@
-Grails Profiles encapsulate project commands, templates, and plugins.
-To create an application using the `vue` profile you can use the next command:
+
+image::https://vuejs.org/images/logo.png[Vue.js, 150, 150, role="thumb left"]
+This profile provides support for building Grails applications with a Vue.js frontend. It includes a simple Vue app which renders the default Grails index page, and retrieves application metadata via a REST call to the Grails application. A simple unit test and an end-to-end (integration) test is included within the Vue project. The Vue project follows the conventions used in the Vue-CLI `webpack` template.
+
+To create an application using the `vue` profile you can use the following command:
 
 [source, bash]
 ----
 grails create-app myapp --profile=vue
 ----
 
-You can also choose this project when generating your project from the
+You can also choose this profile when generating your project from the
 http://start.grails.org/[Grails Application Forge], either from the web app or via the API:
 
 [source, bash]
