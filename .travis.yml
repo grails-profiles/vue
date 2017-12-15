@@ -5,14 +5,3 @@ jdk:
 before_script:
 - rm -rf target
 script: ./travis-build.sh
-env:
-  global:
-  - GIT_NAME="Graeme Rocher"
-  - GIT_EMAIL="graeme.rocher@gmail.com"
-  - secure: [TODO]
-  - secure: [TODO]
-  - secure: [TODO]
-  - secure: [TODO]
-  - secure: [TODO]
-  - secure: [TODO]
-  - secure: [TODO]
