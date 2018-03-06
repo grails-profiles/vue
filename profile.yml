@@ -4,11 +4,11 @@ instructions: |
 
       ./gradlew server:bootRun
 
-    The Vue client app has been built via the vue-cli, using the webpack template. It can be started via 'npm start' (in which case you will need to run 'npm install' to install npm dependencies) or using the Gradle wrapper (which will install npm dependencies automatically if needed):
+    The Vue client app has been built via the Vue CLI (https://github.com/vuejs/vue-cli), using the webpack template. It can be started via 'npm start' (in which case you will need to run 'npm install' to install npm dependencies) or using the Gradle wrapper (which will install npm dependencies automatically if needed):
 
       ./gradlew client:start
 
-    For support, please use the Groovy Community Slack (https://groovycommunity.slack.com/) or open an issue on Github: https://github.com/grails-profiles/vue/issues
+    For support, please use the Grails Community Slack (https://grails-slack.cfapps.io) or open an issue on Github: https://github.com/grails-profiles/vue/issues
 
 skeleton:
     excludes:
