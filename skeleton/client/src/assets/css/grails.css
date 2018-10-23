@@ -34,7 +34,7 @@ pre {
 .navbar .container {
   margin: 10px;
 }
-.navbar-default a {
+.navbar-dark a {
   color: #ffffff !important;
   font-size: 18px !important;
   text-decoration: none;
@@ -43,7 +43,7 @@ pre {
   width: 40px;
 
 }
-.navbar-default, .navbar-static-top {
+.navbar-dark, .navbar-static-top {
   background-color: #424649;
   border: 0px;
 }
@@ -51,25 +51,43 @@ a.navbar-brand {
   color: white !important;
   font-size: 19px !important;
 }
-.navbar-default .navbar-nav>.active>button, .navbar-default .navbar-nav>.active>button:hover, .navbar-default .navbar-nav>.active>button:focus {
+.navbar-dark .navbar-nav>.active>a, .navbar-dark .navbar-nav>.active>a:hover, .navbar-dark .navbar-nav>.active>a:focus {
   background-color: transparent;
   color: white;
 }
-.navbar-nav>li.active>button {
+.navbar-nav>li.active>a {
   color: white !important;
 }
-.navbar-nav>li>button:hover {
-  background-color: #feb672 !important;
+.navbar-nav>li>a:hover {
+  background-color: #2559a7 !important;
   color: white !important;
 }
-.navbar-nav>li>button {
+.navbar-nav>li>a {
   color: #c0d3db;
 }
-.navbar-default .navbar-toggle .icon-bar {
+.navbar-dark .navbar-toggler .icon-bar {
   background-color: white;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #feb672;
+.navbar-dark .navbar-toggle:hover, .navbar-dark .navbar-toggle:focus {
+  background-color: #2559a7;
+}
+
+.navbar-toggler {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.nav .dropdown a.dropdown-toggle {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 @media (min-width: 768px) {
@@ -113,7 +131,7 @@ a.navbar-brand {
 
 #band {
   /*grey =#808080*/
-  background: #feb672  no-repeat 50% 30%;
+  background: #2559a7  no-repeat 50% 30%;
   height: 400px;
 }
 
@@ -381,12 +399,12 @@ body, html {
 }
 
 a {
-  color: #feb672;
+  color: #2559a7;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #feb672;
+  color: #2559a7;
   text-decoration: none
 }
 
@@ -413,13 +431,13 @@ h4 {
 h5 {
   font-size: 1.125em;
   font-weight: bold;
-  color: #feb672;
+  color: #2559a7;
 }
 
 h6 {
   font-size: 1.08em;
   font-weight: normal;
-  color: #feb672;
+  color: #2559a7;
 }
 
 h7 {
@@ -559,7 +577,8 @@ h8 {
   font-weight: 200;
   text-align: center;
   margin: 0;
-  padding: 20px 0
+  padding: 20px 0;
+  width: 100%;
 }
 
 #content hr.row, #content hr.divider {
@@ -899,7 +918,7 @@ html, body, .st-container, .st-pusher, .st-content {
   visibility: hidden;
   width: 300px;
   height: 100%;
-  background: #feb672;
+  background: #2559a7;
   -webkit-transition: all .5s;
   transition: all .5s;
   right: -600px

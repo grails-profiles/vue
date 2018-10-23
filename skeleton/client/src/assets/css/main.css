@@ -128,7 +128,7 @@ img {
   padding: 0;
 }
 
-.nav button {
+.nav a {
   color: #666666;
   display: block;
   padding: 0.25em 0.7em;
@@ -136,6 +136,12 @@ img {
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
+}
+
+.nav li.dropdown-item a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .nav a:active, .nav a:visited {
@@ -173,7 +179,7 @@ img {
   background-image: url(../images/skin/database_add.png);
 }
 
-.nav .dropdown.open ul.dropdown-menu {
+.nav li.dropdown.show ul.dropdown-menu {
   background-color: #424649;
 }
 
@@ -446,7 +452,7 @@ th.desc a {
 }
 
 th:hover, tr:hover {
-  background: #feb672;
+  background: #f5f5f5;
 }
 
 /* PAGINATION */
