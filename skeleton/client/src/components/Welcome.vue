@@ -3,7 +3,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
       <a class="navbar-brand" href="/#"><img src="../assets/images/grails.svg" alt="Grails Logo"/></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -11,23 +12,28 @@
         <ul class="nav navbar-nav ml-auto">
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Application Status <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="true">Application Status <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li v-if="serverInfo" class="dropdown-item"><a href="#">Environment: {{serverInfo.environment}}</a></li>
               <li v-if="serverInfo" class="dropdown-item"><a href="#">App profile: {{serverInfo.appprofile}}</a></li>
 
               <li role="separator" class="divider dropdown-item"></li>
-              <li v-if="serverInfo" class="dropdown-item"><a href="#">Grails version: {{serverInfo.grailsversion}}</a></li>
-              <li v-if="serverInfo" class="dropdown-item"><a href="#">Groovy version: {{serverInfo.groovyversion}}</a></li>
+              <li v-if="serverInfo" class="dropdown-item"><a href="#">Grails version: {{serverInfo.grailsversion}}</a>
+              </li>
+              <li v-if="serverInfo" class="dropdown-item"><a href="#">Groovy version: {{serverInfo.groovyversion}}</a>
+              </li>
               <li v-if="serverInfo" class="dropdown-item"><a href="#">JVM version: {{serverInfo.jvmversion}}</a></li>
               <li role="separator" class="divider dropdown-item"></li>
-              <li v-if="serverInfo" class="dropdown-item"><a href="#">Reloading active: {{serverInfo.reloadingagentenabled ? 'true' :
+              <li v-if="serverInfo" class="dropdown-item"><a href="#">Reloading active:
+                {{serverInfo.reloadingagentenabled ? 'true' :
                 'false' }}</a></li>
             </ul>
           </li>
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Artefacts<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="true">Artefacts<span class="caret"></span></a>
             <ul class="dropdown-menu" v-if="serverInfo">
               <li v-if="serverInfo.artefacts"><a href="#">Controllers: {{serverInfo.artefacts.controllers}}</a></li>
               <li v-if="serverInfo.artefacts"><a href="#">Domains: {{serverInfo.artefacts.domains}}</a></li>
@@ -36,7 +42,8 @@
 
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Installed Plugins <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="true">Installed Plugins <span class="caret"></span></a>
             <ul class="dropdown-menu" v-if="serverInfo">
               <li v-for="plugin in serverInfo.plugins" :key="plugin.name">
                 <a href="#">{{ plugin.name }} - {{ plugin.version }}</a>
@@ -80,8 +87,6 @@
         </div>
       </section>
     </div>
-
-
     <div class="footer row" role="contentinfo">
       <div class="col-md-4">
         <a href="http://guides.grails.org" target="_blank">
@@ -89,7 +94,8 @@
 
         </a>
         <strong class="centered"><a href="http://guides.grails.org" target="_blank">Grails Guides</a></strong>
-        <p>Building your first Grails app? Looking to add security, or create a Single-Page-App? Check out the <a href="http://guides.grails.org" target="_blank">Grails Guides</a> for step-by-step tutorials.</p>
+        <p>Building your first Grails app? Looking to add security, or create a Single-Page-App? Check out the <a
+          href="http://guides.grails.org" target="_blank">Grails Guides</a> for step-by-step tutorials.</p>
 
       </div>
       <div class="col-md-4">
@@ -97,7 +103,8 @@
           <img src="../assets/images/documentation.svg" alt="Grails Documentation" class="float-left"/>
         </a>
         <strong class="centered"><a href="http://docs.grails.org" target="_blank">Documentation</a></strong>
-        <p>Ready to dig in? You can find in-depth documentation for all the features of Grails in the <a href="http://docs.grails.org" target="_blank">User Guide</a>.</p>
+        <p>Ready to dig in? You can find in-depth documentation for all the features of Grails in the <a
+          href="http://docs.grails.org" target="_blank">User Guide</a>.</p>
 
       </div>
 
@@ -105,12 +112,12 @@
         <a href="https://grails-slack.cfapps.io" target="_blank">
           <img src="../assets/images/slack.svg" alt="Grails Slack" class="float-left"/>
         </a>
-        <strong class="centered"><a href="https://grails-slack.cfapps.io" target="_blank">Join the Community</a></strong>
-        <p>Get feedback and share your experience with other Grails developers in the community <a href="https://grails-slack.cfapps.io" target="_blank">Slack channel</a>.</p>
+        <strong class="centered"><a href="https://grails-slack.cfapps.io" target="_blank">Join the
+          Community</a></strong>
+        <p>Get feedback and share your experience with other Grails developers in the community <a
+          href="https://grails-slack.cfapps.io" target="_blank">Slack channel</a>.</p>
       </div>
     </div>
-
-
 
   </div>
 </template>
