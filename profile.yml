@@ -28,9 +28,9 @@ build:
     plugins:
         - war
         - org.grails.grails-web
-        - com.moowork.node
+        - com.github.node-gradle.node
     excludes:
         - org.grails.grails-core
 dependencies:
     build:
-         - "com.moowork.gradle:gradle-node-plugin:1.2.0"
+         - "com.github.node-gradle:gradle-node-plugin:1.3.0"
