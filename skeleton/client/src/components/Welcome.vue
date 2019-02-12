@@ -130,7 +130,7 @@ export default {
       msg: 'Welcome to Your Grails & Vue.js App',
       serverInfo: null,
       showLinks: false,
-      serverURL: process.env.SERVER_URL
+      serverURL: process.env.VUE_APP_SERVER_URL
     }
   },
   methods: {
@@ -141,9 +141,7 @@ export default {
   created: function () {
     fetch(`${this.$data.serverURL}/application`)
       .then(response => response.json())
-      .then(json => {
-        this.serverInfo = json
-      })
+      .then(json => (this.serverInfo = json))
   }
 }
 </script>
