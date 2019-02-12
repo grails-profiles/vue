@@ -98,7 +98,7 @@
           href="http://guides.grails.org" target="_blank">Grails Guides</a> for step-by-step tutorials.</p>
 
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <a href="http://docs.grails.org" target="_blank">
           <img src="../assets/images/documentation.svg" alt="Grails Documentation" class="float-left"/>
         </a>
@@ -134,16 +134,14 @@ export default {
     }
   },
   methods: {
-    toggleLinks: function () {
+    toggleLinks () {
       this.showLinks = !this.$data.showLinks
     }
   },
-  created: function () {
+  created () {
     fetch(`${this.$data.serverURL}/application`)
       .then(response => response.json())
-      .then(json => {
-        this.serverInfo = json
-      })
+      .then(json => (this.serverInfo = json))
   }
 }
 </script>
@@ -178,5 +176,9 @@ export default {
     width: 161px;
     margin-right: -161px;
     margin-bottom: 88px;
+  }
+
+  .footer {
+    font-size: 0.9em;
   }
 </style>
