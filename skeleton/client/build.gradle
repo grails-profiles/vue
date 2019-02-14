@@ -8,15 +8,15 @@ node {
     download = true
 }
 
-task bootRun(dependsOn: 'start') {
+task bootRun(dependsOn: 'serve') {
     group = 'application'
     description = 'Run the client app (for use with gradle bootRun -parallel'
 }
 
-task start(type: YarnTask, dependsOn: 'yarn') {
+task serve(type: YarnTask, dependsOn: 'yarn') {
     group = 'application'
     description = 'Run the client app'
-    args = ['run', 'start']
+    args = ['serve']
 }
 
 task build(type: YarnTask, dependsOn: 'yarn') {
@@ -28,22 +28,4 @@ task lint(type: YarnTask, dependsOn: 'yarn') {
     group = 'build'
     description = 'Run eslint'
     args = ['run', 'lint']
-}
-
-task test(type: YarnTask, dependsOn: 'yarn') {
-    group = 'verification'
-    description = 'Run the unit & e2e tests'
-    args = ['run', 'test']
-}
-
-task unit(type: YarnTask, dependsOn: 'yarn') {
-    group = 'verification'
-    description = 'Run the unit tests'
-    args = ['run', 'unit']
-}
-
-task e2e(type: YarnTask, dependsOn: 'yarn') {
-    group = 'verification'
-    description = 'Run the e2e tests'
-    args = ['run', 'e2e']
 }
