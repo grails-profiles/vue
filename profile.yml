@@ -1,12 +1,12 @@
-description: A profile for creating Grails applications with a Vue.js frontend
+description: A profile for creating a Grails application with a Vue.js frontend
 instructions: |
     This profile provides a client/server multi-project build structure. The server Grails app is using the rest-api profile with CORS enabled. It can be started using 'grails run-app' or using the Gradle wrapper:
 
       ./gradlew server:bootRun
 
-    The Vue client app has been built via the Vue CLI (https://github.com/vuejs/vue-cli), using the webpack template. It can be started via 'npm start' (in which case you will need to run 'npm install' to install npm dependencies) or using the Gradle wrapper (which will install npm dependencies automatically if needed):
+    The Vue client app has been built via the Vue CLI (https://github.com/vuejs/vue-cli), using the webpack template. It can be started via 'npm run serve' (after running 'npm install' to install npm dependencies) or using the Gradle wrapper (which will install npm dependencies automatically if needed):
 
-      ./gradlew client:start
+      ./gradlew client:serve
 
     For support, please use the Grails Community Slack (https://grails-slack.cfapps.io) or open an issue on Github: https://github.com/grails-profiles/vue/issues
 
@@ -28,9 +28,9 @@ build:
     plugins:
         - war
         - org.grails.grails-web
-        - com.moowork.node
+        - com.github.node-gradle.node
     excludes:
         - org.grails.grails-core
 dependencies:
     build:
-         - "com.moowork.gradle:gradle-node-plugin:1.2.0"
+         - "com.github.node-gradle:gradle-node-plugin:1.3.0"
