@@ -61,7 +61,7 @@
       <div class="grails-logo-container">
         <img src="../assets/images/grails-cupsonly-logo-white.svg" class="grails-logo"/>
         <span class="plus-logo">+</span>
-        <img src="../assets/logo.png" class="hero-log"/>
+        <img src="../assets/logo.png" class="hero-logo"/>
       </div>
     </div>
 
@@ -79,9 +79,9 @@
 
         <div id="controllers" role="navigation">
           <h2>Available Controllers:</h2>
-          <ul v-if="serverInfo">
+          <ul v-if="serverInfo && serverInfo.controllers">
 
-            <li v-if="serverInfo.controllers" v-for="controller in serverInfo.controllers" :key="controller.name">
+            <li v-for="controller in serverInfo.controllers" :key="controller.name">
               <a :href="serverURL + '/' + controller.logicalPropertyName">{{controller.name }}</a></li>
           </ul>
         </div>
@@ -98,7 +98,7 @@
           href="http://guides.grails.org" target="_blank">Grails Guides</a> for step-by-step tutorials.</p>
 
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <a href="http://docs.grails.org" target="_blank">
           <img src="../assets/images/documentation.svg" alt="Grails Documentation" class="float-left"/>
         </a>
@@ -130,12 +130,7 @@ export default {
       msg: 'Welcome to Your Grails & Vue.js App',
       serverInfo: null,
       showLinks: false,
-      serverURL: process.env.SERVER_URL
-    }
-  },
-  methods: {
-    toggleLinks () {
-      this.showLinks = !this.$data.showLinks
+      serverURL: process.env.VUE_APP_SERVER_URL
     }
   },
   created () {
@@ -178,7 +173,13 @@ export default {
     margin-bottom: 88px;
   }
 
+  @media only screen and (max-width: 860px) {
+    .plus-logo, .hero-logo  {
+      display: none;
+    }
+  }
+
   .footer {
-    font-size: 0.9em;
+    max-width: 100%!important;
   }
 </style>
