@@ -29,21 +29,3 @@ task lint(type: YarnTask, dependsOn: 'yarn') {
     description = 'Run eslint'
     args = ['run', 'lint']
 }
-
-task test(type: YarnTask, dependsOn: 'yarn') {
-    group = 'verification'
-    description = 'Run the unit & e2e tests'
-    args = ['run', 'test']
-}
-
-task unit(type: YarnTask, dependsOn: 'yarn') {
-    group = 'verification'
-    description = 'Run the unit tests'
-    args = ['run', 'unit']
-}
-
-task e2e(type: YarnTask, dependsOn: 'yarn') {
-    group = 'verification'
-    description = 'Run the e2e tests'
-    args = ['run', 'e2e']
-}
