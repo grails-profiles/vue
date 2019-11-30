@@ -4,9 +4,9 @@ instructions: |
 
       ./gradlew server:bootRun
 
-    The Vue client app has been built via the Vue CLI (https://github.com/vuejs/vue-cli), using the webpack template. It can be started via 'npm start' (in which case you will need to run 'npm install' to install npm dependencies) or using the Gradle wrapper (which will install npm dependencies automatically if needed):
+    The Vue client app has been built via the Vue CLI (https://cli.vuejs.org/). It can be started via npm/yarn (`npm run serve`/`yarn serve`), or by using the Gradle wrapper (which will install npm dependencies automatically if needed):
 
-      ./gradlew client:start
+      ./gradlew client:serve
 
     For support, please use the Grails Community Slack (https://grails-slack.cfapps.io) or open an issue on Github: https://github.com/grails-profiles/vue/issues
 
@@ -33,4 +33,4 @@ build:
         - org.grails.grails-core
 dependencies:
     build:
-         - "com.github.node-gradle:gradle-node-plugin:1.3.0"
+         - "com.github.node-gradle.node:2.2.0"

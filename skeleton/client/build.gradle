@@ -1,5 +1,5 @@
 plugins {
-    id "com.moowork.node" version "1.2.0"
+    id "com.github.node-gradle.node" version "2.2.0"
 }
 
 node {
@@ -8,15 +8,15 @@ node {
     download = true
 }
 
-task bootRun(dependsOn: 'start') {
+task bootRun(dependsOn: 'serve') {
     group = 'application'
     description = 'Run the client app (for use with gradle bootRun -parallel'
 }
 
-task start(type: YarnTask, dependsOn: 'yarn') {
+task serve(type: YarnTask, dependsOn: 'yarn') {
     group = 'application'
     description = 'Run the client app'
-    args = ['run', 'start']
+    args = ['run', 'serve']
 }
 
 task build(type: YarnTask, dependsOn: 'yarn') {

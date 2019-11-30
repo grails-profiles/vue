@@ -59,9 +59,9 @@
 
     <div class="svg" role="presentation">
       <div class="grails-logo-container">
-        <img src="../assets/images/grails-cupsonly-logo-white.svg" class="grails-logo"/>
+        <img alt="Grails Logo" src="../assets/images/grails-cupsonly-logo-white.svg" class="grails-logo"/>
         <span class="plus-logo">+</span>
-        <img src="../assets/logo.png" class="hero-log"/>
+        <img alt="Vue Logo" src="../assets/logo.png" class="hero-log"/>
       </div>
     </div>
 
@@ -79,9 +79,9 @@
 
         <div id="controllers" role="navigation">
           <h2>Available Controllers:</h2>
-          <ul v-if="serverInfo">
+          <ul v-if="serverInfo && serverInfo.controllers">
 
-            <li v-if="serverInfo.controllers" v-for="controller in serverInfo.controllers" :key="controller.name">
+            <li v-for="controller in serverInfo.controllers" :key="controller.name">
               <a :href="serverURL + '/' + controller.logicalPropertyName">{{controller.name }}</a></li>
           </ul>
         </div>
@@ -130,16 +130,11 @@ export default {
       msg: 'Welcome to Your Grails & Vue.js App',
       serverInfo: null,
       showLinks: false,
-      serverURL: process.env.SERVER_URL
-    }
-  },
-  methods: {
-    toggleLinks () {
-      this.showLinks = !this.$data.showLinks
+      serverURL: process.env.VUE_APP_SERVER_URL
     }
   },
   created () {
-    fetch(`${this.$data.serverURL}/application`)
+    fetch(`${this.serverURL}/application`)
       .then(response => response.json())
       .then(json => (this.serverInfo = json))
   }
