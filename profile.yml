@@ -33,4 +33,4 @@ build:
         - org.grails.grails-core
 dependencies:
     build:
-         - "com.github.node-gradle.node:2.2.0"
+         - "com.github.node-gradle:gradle-node-plugin:2.2.0"
