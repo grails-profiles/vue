@@ -10,7 +10,7 @@ if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
   if [[ -n $TRAVIS_TAG ]]; then
       ./gradlew bintrayUpload || EXIT_STATUS=$?
   else
-      ./gradlew publish || EXIT_STATUS=$?
+      ./gradlew publish --stacktrace || EXIT_STATUS=$?
   fi
 
 fi
