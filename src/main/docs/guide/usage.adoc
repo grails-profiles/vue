@@ -10,7 +10,7 @@ The Vue.js client app has been built using the Vue-CLI with the `webpack` templa
 
 [source, bash]
 ----
-./gradlew client:start
+./gradlew client:serve
 ----
 
 The client app's `build.gradle` defines other tasks to test and build the app using the scripts in `client/package.json`.
